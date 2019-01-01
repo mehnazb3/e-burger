@@ -1,0 +1,36 @@
+.BuildControl {
+  
+}
+
+.Add {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 5px;
+  /*width: 30px;*/
+  /*border-radius: 17px;*/
+  vertical-align: baseline;
+
+}
+
+.Add:hover {
+  color: white;
+  background-color: green;
+
+}
+
+.Minus {
+  color: #be1414;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 5px;
+  width: 30px;
+  /*border-radius: 17px;*/
+  vertical-align: baseline;
+}
+
+.Minus:hover {
+  color: white;
+  background-color: #be1414;
+
+}
