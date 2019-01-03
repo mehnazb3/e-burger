@@ -39,6 +39,12 @@
     animation: enable 0.3s linear;
 }
 
+@media (max-width: 767px) {
+  .BuildControls {
+    display: inline-block;
+  }
+}
+
 @keyframes enable {
     0% {
         transform: scale(1);

@@ -70,7 +70,7 @@
   
   .Burger {
     width: 450px;
-    height: 200px;
+    height: 250px;
   }
   
 }
@@ -82,7 +82,7 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
   .Burger {
-    width: 300px;
+    width: 350px;
     height: 250px;
   }
 }

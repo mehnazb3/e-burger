@@ -14,8 +14,9 @@ class Layout extends Component {
   }
 
   toggleSideDrawer = () => {
-    const prevState = this.state.showSideDrawer
-    this.setState({showSideDrawer: true})
+    this.setState( (prevState) =>{
+      return { showSideDrawer: !prevState.showSideDrawer}
+    })
   }
 
   render (){
