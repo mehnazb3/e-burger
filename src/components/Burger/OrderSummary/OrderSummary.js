@@ -1,12 +1,16 @@
 import React from 'react';
-import Aux from '../../../hoc/Aux';
+import Aux from '../../../hoc/Aux/Aux';
 import Button from '../../UI/Button/Button';
 
 const OrderSummary = (props) => {
-  const ingredientsSummary = Object.keys(props.ingredients)
-    .map(ingd => {
-  	return (<li key={ingd}><span style={{textTransform: 'capitalize'}}>{ingd}</span> : {props.ingredients[ingd]}</li>);
-  });
+  let  ingredientsSummary = "You are yet to add ingredients"
+  if (props.ingredients) {
+    ingredientsSummary = Object.keys(props.ingredients)
+      .map(ingd => {
+      return (<li key={ingd}><span style={{textTransform: 'capitalize'}}>{ingd}</span> : {props.ingredients[ingd]}</li>);
+    });
+  }
+  
   return(
     <Aux>
       <h3>Your Order</h3>

@@ -1,0 +1,30 @@
+.ContactData {
+  display: inline-block;
+  text-align: center;
+  align-content: center;
+  margin-left: 34%;
+  text-align: center;
+}
+.ContactData form {
+  display: inline-grid;
+}
+
+.ContactData input {
+  display: block;
+  align-content: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.btn {
+  color: #f7f9fa;
+  margin: 20px 100px !important;
+  background-color: #229b1f;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn:hover {
+  color: #f7f9fa;
+  background-color: #29c025;
+}
