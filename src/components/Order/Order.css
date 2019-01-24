@@ -1,0 +1,14 @@
+.Order {
+  border: 1px solid #232333;
+  margin: 10px;
+  padding: 2px 20px;
+}
+
+.Order span {
+	border: 1px solid #dbdfdf;
+    padding: 4px;
+    border-radius: 10px;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f3f3f3;
+    margin: 0px 5px;
+}

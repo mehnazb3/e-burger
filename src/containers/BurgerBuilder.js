@@ -57,6 +57,7 @@ class BurgerBuilder extends Component {
     }
     console.log("query_params")
     console.log(query_params)
+    query_params.push("price="+this.state.totalPrice)
     this.props.history.push("/checkout?"+query_params.join('&'))
 
     // this.setState({loading: true });

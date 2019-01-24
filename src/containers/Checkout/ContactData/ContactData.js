@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import classes from './ContactData.css'
 import axios from '../../../axios-order';
+import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 
 
@@ -9,16 +10,15 @@ class ContactData extends Component {
 		loading: null
 	}
 	placeOrderHandler = (event) => {
-    console.log("ContactData---------placeOrderHandler")
     console.log(this.props.ingredients)
 		event.preventDefault();
 		this.setState({loading: true });
     const orders = {
       ingredients: this.props.ingredients,
-      price: this.state.totalPrice,
+      price: this.props.price,
       customer: {
-        name: "Mehnaz Bano",
-        email: 'mehnazb3@gmail.com',
+        name: "Manu",
+        email: 'manu@gmail.com',
         address: {
           street: "Rosenthaler str 13",
           zipcode: '11900',
@@ -31,6 +31,7 @@ class ContactData extends Component {
       .then( response => {
         console.log(response)
         this.setState({loading: false })
+        this.props.history.push('/')
       })
       .catch(error => {
         console.log(error)
@@ -58,4 +59,4 @@ class ContactData extends Component {
   }
 }
 
-export default ContactData;
+export default withErrorHandler(ContactData, axios);
