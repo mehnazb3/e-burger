@@ -27,7 +27,6 @@ class Checkout extends Component {
       } else{
         ingredients[param[0]] = +param[1]
       }
-      
     }
     this.setState({ingredients: ingredients, totalPrice: price})
     console.log(ingredients)

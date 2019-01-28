@@ -1,0 +1,7 @@
+.inputElement {
+  padding: 7px;
+}
+
+.invalid {
+  border: 1px solid red;
+}
