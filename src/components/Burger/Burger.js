@@ -4,6 +4,7 @@ import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const Burger = (props) => {
   let ingredientsKeys = null
+  console.log(props.ingredients);
   if (props.ingredients) {
     ingredientsKeys = Object.keys(props.ingredients)
       .map(ingredKey => {

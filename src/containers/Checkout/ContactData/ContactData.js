@@ -4,6 +4,7 @@ import axios from '../../../axios-order';
 import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import FormElement from '../../../components/UI/FormElement/FormElement'
+import {connect} from 'react-redux';
 
 class ContactData extends Component {
 	state = {
@@ -103,7 +104,7 @@ class ContactData extends Component {
 		this.setState({loading: true });
     const formData = this.state.formFields;
     const orders = {
-      ingredients: this.props.ingredients,
+      ingredients: this.props.ings,
       price: this.props.price,
       customer: {
         name: formData.name.value,
@@ -138,8 +139,6 @@ class ContactData extends Component {
     if ( rules.maxLength && (value.length > rules.maxLength) ) {
       isValid = false;
     }
-    console.log("isValid===")
-    console.log(isValid)
     return isValid
 
   }
@@ -183,4 +182,11 @@ class ContactData extends Component {
   }
 }
 
-export default withErrorHandler(ContactData, axios);
+const mapStateToProps = (state) => {
+  return {
+    ings: state.ingredients,
+    price: state.totalPrice,
+  }
+}
+
+export default connect(mapStateToProps)(withErrorHandler(ContactData, axios));
